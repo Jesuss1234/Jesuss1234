@@ -1,0 +1,36 @@
+a:hover {
+    color: purple;
+  }
+
+a:active {
+    background-color: yellow;
+}
+
+.seccion1 p:first-child {
+    color: blue;
+}
+
+.seccion2 p:last-child {
+    font-style: italic;
+}
+
+.seccion1 p:nth-child(2) {
+    color: green;
+}
+
+ul li:first-child {
+    font-weight: bold;
+}
+  
+ul li:nth-child(2) {
+    color: orange;
+}
+
+img:hover {
+    background-color: lightgray;
+}
+
+a:active {
+    color: red;
+}
+  
