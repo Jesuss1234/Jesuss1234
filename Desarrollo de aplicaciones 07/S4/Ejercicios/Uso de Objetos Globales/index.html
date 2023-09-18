@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulación de Arrays</title>
+</head>
+<body>
+    <h1>Manipulación de Arrays</h1>
+    <p>Array inicial: [1, 2, 3, 4, 5]</p>
+    <p>Nuevo número: <span id="nuevoNumero"></span></p>
+    <button onclick="agregarNumero()">Agregar Número</button>
+    <script>
+        const numeros = [1, 2, 3, 4, 5];
+        function agregarNumero() {
+            const nuevoNumero = Math.floor(Math.random() * 10) + 1;
+            numeros.push(nuevoNumero);
+            document.getElementById("nuevoNumero").textContent = nuevoNumero;
+        }
+    </script>
+</body>
+</html>

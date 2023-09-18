@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones de Primera Clase</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <ul>
+        <li>5 + 3 = <span id="suma"></span></li>
+        <li>5 - 3 = <span id="resta"></span></li>
+        <li>5 * 3 = <span id="multiplicacion"></span></li>
+        <li>5 / 3 = <span id="division"></span></li>
+    </ul>
+    <script>
+        function calculadora(numero1, numero2, operacion) {
+            return operacion(numero1, numero2);
+        }
+        function suma(a, b) {
+            return a + b;
+        }
+        function resta(a, b) {
+            return a - b;
+        }
+        function multiplicacion(a, b) {
+            return a * b;
+        }
+        function division(a, b) {
+            return a / b;
+        }
+        const resultadoSuma = calculadora(5, 3, suma);
+        const resultadoResta = calculadora(5, 3, resta);
+        const resultadoMultiplicacion = calculadora(5, 3, multiplicacion);
+        const resultadoDivision = calculadora(5, 3, division);
+
+        document.getElementById("suma").textContent = resultadoSuma;
+        document.getElementById("resta").textContent = resultadoResta;
+        document.getElementById("multiplicacion").textContent = resultadoMultiplicacion;
+        document.getElementById("division").textContent = resultadoDivision;
+    </script>
+</body>
+</html>

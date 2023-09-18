@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting y Alcance de Variables</title>
+</head>
+<body>
+    <h1>Hoisting y Alcance de Variables</h1>
+    <p>Primer valor de x: <span id="primerValor"></span></p>
+    <p>Segundo valor de x: <span id="segundoValor"></span></p>
+    <p>Valor de myVar dentro de la función (antes de inicializar): <span id="valorDentroFuncionAntes"></span></p>
+    <p>Valor de myVar dentro de la función (después de inicializar): <span id="valorDentroFuncionDespues"></span></p>
+    <p>Valor de myVar fuera de la función: <span id="valorFueraFuncion"></span></p>
+    <button onclick="actualizarValores()">Actualizar Valores</button>
+    <script>
+        var x = 3;
+        var myVar;
+        (function () {
+            myVar = 'valor local';
+            console.log("Primer valor de x:", x);
+            console.log("Valor de myVar dentro de la función (antes de inicializar):", myVar);
+        })();
+        console.log("Segundo valor de x:", x);
+        console.log("Valor de myVar dentro de la función (después de inicializar):", myVar);
+        function actualizarValores() {
+            document.getElementById("primerValor").textContent = x;
+            document.getElementById("segundoValor").textContent = x;
+            document.getElementById("valorDentroFuncionAntes").textContent = "No definido";
+            document.getElementById("valorDentroFuncionDespues").textContent = myVar;
+            document.getElementById("valorFueraFuncion").textContent = "No definido";
+        }
+    </script>
+</body>
+</html>

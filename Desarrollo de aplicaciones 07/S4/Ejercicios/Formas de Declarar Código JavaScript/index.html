@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaración de Código en Línea</title>
+    <script>
+        function cambiarColor() {
+            const colores = ["red", "blue", "green", "yellow"];
+            const colorAleatorio = colores[Math.floor(Math.random() * colores.length)];
+            document.body.style.backgroundColor = colorAleatorio;
+        }
+    </script>
+</head>
+<body>
+    <button onclick="cambiarColor()">Cambiar Color</button>
+</body>
+</html>

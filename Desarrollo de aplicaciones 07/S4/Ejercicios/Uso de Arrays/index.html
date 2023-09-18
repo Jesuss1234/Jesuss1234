@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulación de Arrays</title>
+</head>
+<body>
+    <h1>Operaciones con Arrays</h1>
+    <ul>
+        <li>Números: [1, 2, 3, 4, 5]</li>
+        <li>Número más grande: <span id="maximo"></span></li>
+        <li>Suma de los números: <span id="suma"></span></li>
+    </ul>
+    <script>
+        const numeros = [1, 2, 3, 4, 5];
+        numeros.push(6);
+        numeros.shift();
+        const maximo = Math.max(...numeros);
+        const suma = numeros.reduce((a, b) => a + b, 0);
+        
+        document.getElementById("maximo").textContent = maximo;
+        document.getElementById("suma").textContent = suma;
+    </script>
+</body>
+</html>

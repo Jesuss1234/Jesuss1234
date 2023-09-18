@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creación de Objetos</title>
+</head>
+<body>
+    <h1>Información del Coche</h1>
+    <ul>
+        <li>Marca: <span id="marca"></span></li>
+        <li>Modelo: <span id="modelo"></span></li>
+        <li>Año: <span id="año"></span></li>
+    </ul>
+    <script>
+        const coche = {
+            marca: "Toyota",
+            modelo: "Corolla",
+            año: 2022
+        };
+        document.getElementById("marca").textContent = coche.marca;
+        document.getElementById("modelo").textContent = coche.modelo;
+        document.getElementById("año").textContent = coche.año;
+    </script>
+</body>
+</html>
